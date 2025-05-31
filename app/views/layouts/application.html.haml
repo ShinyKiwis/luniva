@@ -14,6 +14,8 @@
     %link{:href => "/icon.png", :rel => "apple-touch-icon"}/
     = stylesheet_link_tag :app
     = vite_client_tag
-    = vite_javascript_tag 'entrypoints/application'
+    - if @application_pack.present?
+      = vite_javascript_tag @application_pack
   %body
+    #app
     = yield
