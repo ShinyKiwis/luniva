@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HU&display=swap');
+@import "tailwindcss";
+
+#logo {
+  font-family: "Playwrite HU", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
