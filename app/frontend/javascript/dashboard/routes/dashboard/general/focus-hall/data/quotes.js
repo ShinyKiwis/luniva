@@ -1,0 +1,22 @@
+export default [
+  { quote: "Don’t watch the clock; do what it does. Keep going.", author: "Sam Levenson" },
+  { quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.", author: "Winston Churchill" },
+  { quote: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+  { quote: "Dream big and dare to fail.", author: "Norman Vaughan" },
+  { quote: "Your limitation—it’s only your imagination.", author: "" },
+  { quote: "Push yourself, because no one else is going to do it for you.", author: "" },
+  { quote: "Great things never come from comfort zones.", author: "" },
+  { quote: "Don’t stop when you’re tired. Stop when you’re done.", author: "" },
+  { quote: "The harder you work for something, the greater you’ll feel when you achieve it.", author: "" },
+  { quote: "Wake up with determination. Go to bed with satisfaction.", author: "" },
+  { quote: "Start where you are. Use what you have. Do what you can.", author: "Arthur Ashe" },
+  { quote: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
+  { quote: "Little by little, a little becomes a lot.", author: "Tanzanian Proverb" },
+  { quote: "Success usually comes to those who are too busy to be looking for it.", author: "Henry David Thoreau" },
+  { quote: "Don’t limit your challenges. Challenge your limits.", author: "" },
+  { quote: "It always seems impossible until it’s done.", author: "Nelson Mandela" },
+  { quote: "Strive for progress, not perfection.", author: "" },
+  { quote: "The future depends on what you do today.", author: "Mahatma Gandhi" },
+  { quote: "Be stronger than your excuses.", author: "" },
+  { quote: "Focus on the step in front of you, not the whole staircase.", author: "" }
+];

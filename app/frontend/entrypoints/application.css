@@ -6,3 +6,15 @@
   font-optical-sizing: auto;
   font-weight: 400;
 }
+
+h2 {
+  @apply text-2xl font-medium;
+}
+
+input {
+  @apply w-full focus:outline-none;
+}
+
+.primary-button {
+  @apply font-semibold text-sm text-white bg-sky-600 rounded-md px-4 py-1 cursor-pointer hover:bg-sky-600/65 duration-200;
+}

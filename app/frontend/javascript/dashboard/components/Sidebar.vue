@@ -21,7 +21,7 @@ const toolItems = [
 
 <template>
   <aside :class="[
-      'py-2 border-r-2 border-neutral-200 transition-all duration-400 ease-in-out',
+      'py-2 border-r-2 border-neutral-200 transition-all duration-400 ease-in-out z-0',
       isCollapsed ? 'w-16' : 'w-1/7'
     ]"
   >
