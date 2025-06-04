@@ -113,7 +113,7 @@ const zenSettings = [
         </div>
       </div>
     </form>
-    <div class="border-t-2 border-neutral-200 mt-4 px-4 py-2 flex items-center justify-between">
+    <div class="border-t-2 border-neutral-200 mt-4 ps-2 pe-4 py-2 flex items-center justify-between">
       <DropdownModal>
         <template #trigger>
           <button class="group-[.dropdown-open]:bg-neutral-200/50 hover:bg-neutral-200/50 rounded-md flex items-center px-2 py-1 gap-1 font-medium text-sm text-neutral-700 cursor-pointer">
