@@ -1,10 +1,16 @@
 <script setup>
 import { Icon } from "@iconify/vue";
+import ActivityCardModal from "./ActivityCardModal.vue"
 import Card from "gcomponents/Card.vue";
-import DropdownModal from "gcomponents/DropdownModal.vue";
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 const mode = ref('zen');
+const sessionName = ref('');
+const sessionDescription = ref('');
+
+const isDisabled = computed(() => {
+  return sessionName.value.trim() === ''
+})
 
 const pomodoroConfig = ref({
   pomodoroDuration: 25,
@@ -29,6 +35,7 @@ const zenSettings = [
   { id: 'zen', label: 'Zen', icon: 'tabler:plant-2', model: 'zenDuration', placeholder: '30 minutes'},
   { id: 'break', label: 'Break', icon: 'tabler:clock-pause', model: 'breakDuration', placeholder: '10 minutes'},
 ]
+
 </script>
 
 <template>
@@ -62,12 +69,14 @@ const zenSettings = [
     </div>
     <form class="text-sm px-4">
       <input 
+        v-model="sessionName"
         type="text"
         placeholder='Session name'
         class="font-semibold mb-1"
         autofocus
       />
       <input 
+        v-model="sessionDescription"
         type="text"
         placeholder='Description'
         class="text-xs"
@@ -114,19 +123,11 @@ const zenSettings = [
       </div>
     </form>
     <div class="border-t-2 border-neutral-200 mt-4 ps-2 pe-4 py-2 flex items-center justify-between">
-      <DropdownModal>
-        <template #trigger>
-          <button class="group-[.dropdown-open]:bg-neutral-200/50 hover:bg-neutral-200/50 rounded-md flex items-center px-2 py-1 gap-1 font-medium text-sm text-neutral-700 cursor-pointer">
-            <Icon icon="tabler:message-chatbot" class="w-5 h-5" />
-            <span>Activity</span>
-            <Icon icon="tabler:caret-down-filled" class="w-3 h-3" />
-          </button>
-        </template>
-        <template #content>
-          <span>Content</span>
-        </template>
-      </DropdownModal>
-      <button class="primary-button">
+      <ActivityCardModal />
+      <button 
+        :class="isDisabled ? 'disabled-primary-button' : 'primary-button'"
+        :disabled="isDisabled"
+      >
         Start
       </button>
     </div>

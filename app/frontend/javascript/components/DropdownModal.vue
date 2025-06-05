@@ -28,7 +28,7 @@ const toggle = () => {
     <transition name="fade">
       <div
         v-if="isOpen"
-        class="absolute left-1/2 mt-2 w-56 h-fit bg-white border-2 border-neutral-200 rounded-md shadow-md z-10 transform -translate-x-1/2 isolate"
+        class="absolute left-1/2 mt-1 w-64 h-fit bg-white border-2 border-neutral-200 rounded-md shadow-md z-10 transform -translate-x-1/2 isolate"
       >
         <slot name="content" />
       </div>

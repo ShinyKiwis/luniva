@@ -7,15 +7,15 @@ const route = useRoute();
 
 const isCollapsed = ref(false);
 const generalItems = [
-  { title: 'Dashboard', icon: 'tabler:layout-dashboard-filled', to: 'dashboard_root' },
-  { title: 'Focus Hall', icon: 'tabler:focus-2', to: 'focus_hall' },
+  { title: 'Dashboard', icon: 'tabler:layout-dashboard', to: 'dashboard_root' },
+  { title: 'Focus Hall', icon: 'tabler:target-arrow', to: 'focus_hall' },
   { title: 'Resources', icon: 'tabler:brand-databricks', to: '' },
 ]
 
 const toolItems = [
   { title: 'Todoer', icon: 'tabler:list-check', to: '' },
-  { title: 'Bookmarker', icon: 'tabler:bookmark-filled', to: '' },
-  { title: 'Expense Tracker', icon: 'tabler:zoom-money-filled', to: '' },
+  { title: 'Bookmarker', icon: 'tabler:bookmark', to: '' },
+  { title: 'Expense Tracker', icon: 'tabler:zoom-money', to: '' },
 ]
 </script>
 
