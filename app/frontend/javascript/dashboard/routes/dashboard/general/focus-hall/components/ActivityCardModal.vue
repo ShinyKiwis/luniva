@@ -33,9 +33,9 @@ const newActivity = computed(() => {
         </form>
         <div v-if="newActivity">
           <span class="text-neutral-500 text-sm inline-block my-2">Activity not found</span>
-          <button class="hover:bg-sky-100/75 text-sky-700 rounded-md p-2 text-xs text-left font-medium break-words w-full cursor-pointer flex items-center gap-1">
+          <button class="hover:bg-sky-100/75 text-sky-700 rounded-md p-2 text-xs text-left font-medium wrap-anywhere w-full cursor-pointer flex items-center gap-1">
             <Icon icon="tabler:plus" class="w-4 h-4" />
-            <span>
+            <span class="flex-1">
               <span>Create new activity</span>
               {{' '}}
               <span class="italic">"{{searchQuery}}"</span>
