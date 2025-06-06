@@ -39,7 +39,7 @@ const zenSettings = [
 </script>
 
 <template>
-  <Card>
+  <Card class="w-96">
     <div class="flex items-center justify-between px-4 py-2">
       <span class="text-base font-medium mb-2">Session Setup</span>
       <div class="text-xs inline-flex items-center bg-gray-100 rounded-full select-none">
@@ -75,11 +75,11 @@ const zenSettings = [
         class="font-semibold mb-1"
         autofocus
       />
-      <input 
+      <textarea 
         v-model="sessionDescription"
         type="text"
         placeholder='Description'
-        class="text-xs"
+        class="w-full focus:outline-none max-h-24 resize-y text-xs"
       />
       <div v-if="mode === 'pomodoro'" class="mt-2">
         <span class="font-semibold text-red-700">Pomodoro Settings</span>
