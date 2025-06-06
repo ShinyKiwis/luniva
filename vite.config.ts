@@ -13,6 +13,8 @@ export default defineConfig({
     alias: {
       dashboard: path.resolve('./app/frontend/javascript/dashboard'),
       gcomponents: path.resolve('./app/frontend/javascript/components'),
+      gcharts: path.resolve('./app/frontend/javascript/charts'),
+      ghelpers: path.resolve('./app/frontend/javascript/helpers'),
       layouts: path.resolve('./app/frontend/javascript/layouts')
     }
   }

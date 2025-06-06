@@ -13,6 +13,10 @@ onClickOutside(target, _event => {
 const toggle = () => {
   isOpen.value = !isOpen.value
 }
+
+defineExpose({
+  toggle
+})
 </script>
 
 <template>
