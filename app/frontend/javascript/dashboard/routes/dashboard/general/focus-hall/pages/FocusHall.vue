@@ -16,13 +16,12 @@ const randomQuote = (() => {
       <span>{{ randomQuote.quote }}</span>
       <span class="italic">{{ ` - ${randomQuote.author || 'Anonymous'}` }}</span>
     </span>
-    <div class="flex gap-4">
+    <div class="flex gap-8 flex-1">
       <div class="flex flex-col gap-4">
         <SessionSetupCard />
         <ReportCard />
       </div>
-      <div class="w-full">
-        Main
+      <div class="aspect-video w-full bg-cover bg-center rounded-xl" :style="{ backgroundImage: `url('/images/wallpaper_1.jpeg')`}">
       </div>
     </div>
   </div>

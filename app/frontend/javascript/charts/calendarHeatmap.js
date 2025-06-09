@@ -23,16 +23,22 @@ echarts.use([
 export function render(container, data) {
   const calendarHeatmap = echarts.init(container);
   calendarHeatmap.setOption({
-    tooltip: {},
+    tooltip: {
+      formatter: function (params) {
+        const [date, value] = params.value;
+        return `${date}: ${value}`;
+      }
+    },
     visualMap: {
       show: false,
       inRange: {
-        color: ['#e0f3f8', '#abd9e9', '#74add1', '#4575b4', '#313695']  // light to dark blues
+        color: ['#f0f9ff', '#abd9e9', '#74add1', '#4575b4', '#313695']
       }
     },
     calendar: {
-      top: 0,
+      top: 20,
       left: 'center',
+      bottom: 20,
       cellSize: 25,
       range: DateHelper.currentMonthRange,
       splitLine: {
@@ -42,7 +48,7 @@ export function render(container, data) {
       },
       itemStyle: {
         borderWidth: 0.5,
-        borderColor: '#ccc'
+        borderColor: '#d0e3f0'
       },
       dayLabel: {
         nameMap: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']

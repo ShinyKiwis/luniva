@@ -45,7 +45,12 @@ onBeforeUnmount(() => {
       <span class="text-base font-medium mb-2">
         {{ monthlySessions.length }} sessions in {{ DateHelper.currentMonth }}
       </span>
-      <div ref="heatMap" class="w-full h-56 my-2" />
+      <div ref="heatMap" class="w-full h-56" />
+      <div>
+        <span class="text-base font-medium mb-2">
+          Session activities
+        </span>
+      </div>
     </div>
   </Card>
 </template>
