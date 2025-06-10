@@ -13,7 +13,7 @@ const generalItems = [
 ]
 
 const toolItems = [
-  { title: 'Todoer', icon: 'tabler:list-check', to: '' },
+  { title: 'Todoer', icon: 'tabler:list-check', to: 'todoer' },
   { title: 'Bookmarker', icon: 'tabler:bookmark', to: '' },
   { title: 'Expense Tracker', icon: 'tabler:zoom-money', to: '' },
 ]
@@ -21,12 +21,12 @@ const toolItems = [
 
 <template>
   <aside :class="[
-      'py-2 border-r-2 border-neutral-200 transition-all duration-400 ease-in-out z-0',
+      'py-2 border-r-2 border-neutral-200 transition-all duration-300 ease-in-out z-0',
       isCollapsed ? 'w-16' : 'w-1/7'
     ]"
   >
     <div :class="[
-        'px-4 pb-2 flex items-center border-b-2 border-neutral-200',
+        'h-10 px-4 pb-2 flex items-center border-b-2 border-neutral-200',
         isCollapsed ? 'justify-center' : 'justify-between'
       ]"
     >
@@ -62,7 +62,7 @@ const toolItems = [
       </ul>
     </div>
     <div class="px-4 pt-2 pb-6">
-      <span class="font-medium text-neutral-400 block" v-if="!isCollapsed">Tool</span>
+      <span class="font-medium text-neutral-400 block" v-if="!isCollapsed">Tools</span>
       <ul class="mt-2 flex flex-col gap-3">
         <li v-for="item in toolItems">
           <router-link :to="{ name: item.to }" :class="[

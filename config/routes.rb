@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   # Global action pages
   get 'focus-hall', to: 'pages#focus_hall'
 
+  scope :tools do
+    get 'todoer', to: 'pages#todoer'
+  end
+
   namespace :api, defaults: { format: 'json' } do
     namespace :v1 do
       resources :users, only: [:show, :update] do

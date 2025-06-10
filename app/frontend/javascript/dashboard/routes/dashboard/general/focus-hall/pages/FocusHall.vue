@@ -10,7 +10,7 @@ const randomQuote = (() => {
 </script>
 
 <template>
-  <div class="min-h-screen p-8 flex flex-col gap-4">
+  <div class="p-8 flex flex-col gap-4">
     <h2>Focus Hall</h2>
     <span class="text-sm text-gray-500">
       <span>{{ randomQuote.quote }}</span>
