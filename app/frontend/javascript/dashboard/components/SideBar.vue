@@ -21,7 +21,7 @@ const toolItems = [
 
 <template>
   <aside :class="[
-      'py-2 border-r-2 border-neutral-200 transition-all duration-300 ease-in-out z-0',
+      'py-2 border-r-2 border-neutral-200 transition-all duration-400 ease-in-out z-0 bg-white',
       isCollapsed ? 'w-16' : 'w-1/7'
     ]"
   >
@@ -30,14 +30,16 @@ const toolItems = [
         isCollapsed ? 'justify-center' : 'justify-between'
       ]"
     >
-      <router-link
-        v-if="!isCollapsed"
-        :to="{ name: 'dashboard_root' }"
-        id="logo" 
-        class="text-2xl font-bold tracking-wide text-sky-600 select-none cursor-pointer"
-      >
-        Luniva
-      </router-link>
+      <transition name="fade" leave-active-class="">
+        <router-link
+          v-if="!isCollapsed"
+          :to="{ name: 'dashboard_root' }"
+          id="logo" 
+          class="text-2xl font-bold tracking-wide text-sky-600 select-none cursor-pointer"
+        >
+          Luniva
+        </router-link>
+      </transition>
       <button @click="isCollapsed = !isCollapsed" class="hover:bg-sky-100/75 p-1 rounded-md transition duration-300">
         <Icon 
           :icon="isCollapsed ? 'tabler:layout-sidebar-right-collapse-filled' : 'tabler:layout-sidebar-left-collapse-filled' "
@@ -50,13 +52,15 @@ const toolItems = [
       <ul class="mt-2 flex flex-col gap-3">
         <li v-for="item in generalItems">
           <router-link :to="{ name: item.to }" :class="[
-              'flex gap-4',
-              isCollapsed ? 'justify-center' : 'items-center',
-              item.to === route.name ? 'active-item' : 'inactive-item'
-            ]
+            'flex gap-4',
+            isCollapsed ? 'justify-center' : 'items-center',
+            item.to === route.name ? 'active-item' : 'inactive-item'
+          ]
           ">
             <Icon :icon="item.icon" class="min-w-6 min-h-6"/>
-            <span v-if="!isCollapsed" class="whitespace-nowrap">{{ item.title }}</span>
+            <transition name="fade" leave-active-class="">
+              <span v-if="!isCollapsed" class="whitespace-nowrap">{{ item.title }}</span>
+            </transition>
           </router-link>
         </li>
       </ul>
@@ -66,13 +70,15 @@ const toolItems = [
       <ul class="mt-2 flex flex-col gap-3">
         <li v-for="item in toolItems">
           <router-link :to="{ name: item.to }" :class="[
-              'flex gap-4',
-              isCollapsed ? 'justify-center' : 'items-center',
-              item.to === route.name ? 'active-item' : 'inactive-item'
-            ]
+            'flex gap-4',
+            isCollapsed ? 'justify-center' : 'items-center',
+            item.to === route.name ? 'active-item' : 'inactive-item'
+          ]
           ">
             <Icon :icon="item.icon" class="min-w-6 min-h-6"/>
-            <span v-if="!isCollapsed" class="whitespace-nowrap">{{ item.title }}</span>
+            <transition name="fade" leave-active-class="">
+              <span v-if="!isCollapsed" class="whitespace-nowrap">{{ item.title }}</span>
+            </transition>
           </router-link>
         </li>
       </ul>
@@ -88,5 +94,15 @@ const toolItems = [
 
 .inactive-item {
   @apply text-neutral-400 hover:text-sky-600 hover:bg-sky-100/75 px-2 py-1 rounded-md transition duration-300;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
