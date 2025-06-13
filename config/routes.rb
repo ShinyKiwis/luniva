@@ -6,10 +6,13 @@ Rails.application.routes.draw do
   }
 
   # Global action pages
-  get 'focus-hall', to: 'pages#focus_hall'
+  get 'focus-hall', to: 'dashboard#index'
 
   scope :tools do
-    get 'todoer', to: 'pages#todoer'
+    get 'todoer', to: 'dashboard#index'
+    get 'todoer/todo', to: 'dashboard#index'
+    get 'todoer/upcoming', to: 'dashboard#index'
+    get 'todoer/done', to: 'dashboard#index'
   end
 
   namespace :api, defaults: { format: 'json' } do

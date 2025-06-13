@@ -9,14 +9,18 @@ const isCollapsed = ref(false);
 const generalItems = [
   { title: 'Dashboard', icon: 'tabler:layout-dashboard', to: 'dashboard_root' },
   { title: 'Focus Hall', icon: 'tabler:target-arrow', to: 'focus_hall' },
-  { title: 'Resources', icon: 'tabler:brand-databricks', to: '' },
+  { title: 'Resources', icon: 'tabler:brand-databricks', to: 'dashboard_root' },
 ]
 
 const toolItems = [
   { title: 'Todoer', icon: 'tabler:list-check', to: 'todoer' },
-  { title: 'Bookmarker', icon: 'tabler:bookmark', to: '' },
-  { title: 'Expense Tracker', icon: 'tabler:zoom-money', to: '' },
+  { title: 'Bookmarker', icon: 'tabler:bookmark', to: 'dashboard_root' },
+  { title: 'Expense Tracker', icon: 'tabler:zoom-money', to: 'dashboard_root' },
 ]
+
+const activeItem = (itemLink) => {
+  return route.name && (route.name === itemLink || route.name.includes(itemLink))
+}
 </script>
 
 <template>
@@ -54,7 +58,7 @@ const toolItems = [
           <router-link :to="{ name: item.to }" :class="[
             'flex gap-4',
             isCollapsed ? 'justify-center' : 'items-center',
-            item.to === route.name ? 'active-item' : 'inactive-item'
+            activeItem(item.to) ? 'active-item' : 'inactive-item'
           ]
           ">
             <Icon :icon="item.icon" class="min-w-6 min-h-6"/>
@@ -72,7 +76,7 @@ const toolItems = [
           <router-link :to="{ name: item.to }" :class="[
             'flex gap-4',
             isCollapsed ? 'justify-center' : 'items-center',
-            item.to === route.name ? 'active-item' : 'inactive-item'
+            activeItem(item.to) ? 'active-item' : 'inactive-item'
           ]
           ">
             <Icon :icon="item.icon" class="min-w-6 min-h-6"/>

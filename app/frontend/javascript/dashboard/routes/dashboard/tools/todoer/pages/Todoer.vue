@@ -6,6 +6,9 @@ import TodoerSidebar from "../components/TodoerSidebar.vue";
   <div class="p-8 h-full">
     <div class="flex gap-4">
       <TodoerSidebar />
+      <div class="flex-1">
+        <router-view />
+      </div>
     </div>
   </div>
 </template>

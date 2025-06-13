@@ -6,9 +6,9 @@ import { useRoute } from "vue-router";
 const route = useRoute();
 
 const taskItems = [
-  { title: 'To do', icon: 'tabler:calendar-search', to: '' },
-  { title: 'Upcoming', icon: 'tabler:calendar-clock', to: '' },
-  { title: 'Done', icon: 'tabler:calendar-smile', to: '' }
+  { title: 'To do', icon: 'tabler:calendar-search', to: 'todoer/todo-list' },
+  { title: 'Upcoming', icon: 'tabler:calendar-clock', to: 'todoer/upcoming-list' },
+  { title: 'Done', icon: 'tabler:calendar-smile', to: 'todoer/done-list' }
 ]
 
 const projectItems = ref([])
@@ -24,7 +24,7 @@ const projectItems = ref([])
         ]
         ">
           <Icon :icon="item.icon" class="w-6 h-6"/>
-          <span v-if="!isCollapsed" class="whitespace-nowrap">{{ item.title }}</span>
+          <span class="whitespace-nowrap">{{ item.title }}</span>
         </router-link>
       </li>
     </ul>
