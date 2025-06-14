@@ -6,7 +6,7 @@
     <slot name='sidebar' if="$slots.sidebar" />
     <div class="flex flex-col flex-1 pt-2">
       <slot name='headerbar' if="$slots.headerbar" />
-      <main class="flex-1 overflow-auto">
+      <main class="flex-1">
         <router-view />
       </main>
     </div>
