@@ -38,7 +38,6 @@ const priorityOptions = [
 
 const clearDate = () => {
   taskOptions.value.date = null;
-  hideAllPoppers();
 }
 
 </script>
