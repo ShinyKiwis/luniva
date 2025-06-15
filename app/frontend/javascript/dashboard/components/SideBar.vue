@@ -98,11 +98,11 @@ const activeItem = (itemLink) => {
 <style scoped>
 @reference "tailwindcss";
 .active-item {
-  @apply font-medium text-sky-600 bg-sky-100/75 px-2 py-1 rounded-md;
+  @apply font-medium text-sky-600 bg-sky-100/75 px-2 py-1.5 rounded-md;
 }
 
 .inactive-item {
-  @apply text-neutral-400 hover:text-sky-600 hover:bg-sky-100/75 px-2 py-1 rounded-md transition duration-300;
+  @apply text-neutral-400 hover:text-sky-600 hover:bg-sky-100/75 px-2 py-1.5 rounded-md transition duration-300;
 }
 
 .fade-enter-active,

@@ -1,5 +1,5 @@
 <script setup>
-import TodoerSidebar from "../components/TodoerSidebar.vue";
+import TodoerSidebar from "./components/TodoerSidebar.vue";
 </script>
 
 <template>

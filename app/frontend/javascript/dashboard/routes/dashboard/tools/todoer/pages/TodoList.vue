@@ -1,5 +1,6 @@
 <script setup>
 import { Icon } from "@iconify/vue";
+import AddTaskModal from "../components/AddTaskModal.vue";
 
 const greetingMessage = () => {
   const hour = new Date().getHours();
@@ -16,17 +17,13 @@ const greetingMessage = () => {
   }
 }
 </script>
+
 <template>
-  <div class="my-3 flex flex-col gap-4">
+  <div class="w-3/4 mx-auto my-3 flex flex-col gap-4">
     <h2>{{ greetingMessage() }}</h2>
     <span class="text-sm text-gray-500">
       What do you plan to do today?
     </span>
-    <div class="ms-4">
-      <span class="flex items-center gap-2 group cursor-pointer">
-        <Icon icon='tabler:plus' class="w-5 h-5 text-sky-600 rounded-full group-hover:bg-sky-600 group-hover:text-white"/>
-        <span class="text-sm text-neutral-500 group-hover:text-sky-600">Add task</span>
-      </span>
-    </div>
+    <AddTaskModal />
   </div>
 </template>

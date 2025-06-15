@@ -15,16 +15,27 @@ input {
   @apply w-full focus:outline-none;
 }
 
+.v-popper__arrow-outer {
+  visibility: hidden !important;
+}
 
+.v-popper__arrow-inner {
+  visibility: hidden !important;
+}
 
 @layer components {
   .primary-button {
-    @apply font-semibold text-sm rounded-md px-4 py-1 cursor-pointer duration-200;
+    @apply font-semibold text-sm rounded-md px-2 py-1 cursor-pointer duration-200;
     @apply text-white bg-sky-600 hover:bg-sky-600/65;
   }
 
+  .secondary-cancel-button {
+    @apply font-semibold text-sm rounded-md px-2 py-1 cursor-pointer duration-200;
+    @apply text-neutral-500 bg-neutral-200 hover:bg-neutral-200/65;
+  }
+
   .disabled-primary-button {
-    @apply font-semibold text-sm rounded-md px-4 py-1 cursor-pointer duration-200;
+    @apply font-semibold text-sm rounded-md px-2 py-1 cursor-pointer duration-200;
     @apply bg-neutral-300 cursor-not-allowed opacity-50;
   }
 }

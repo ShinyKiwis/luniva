@@ -1,7 +1,7 @@
-import Todoer from "./pages/Todoer.vue";
-import TodoList from "./components/TodoList.vue";
-import UpcomingList from "./components/UpcomingList.vue";
-import DoneList from "./components/DoneList.vue";
+import Todoer from "./Todoer.vue";
+import TodoList from "./pages/TodoList.vue";
+import UpcomingList from "./pages/UpcomingList.vue";
+import DoneList from "./pages/DoneList.vue";
 
 export default {
   routes: [
